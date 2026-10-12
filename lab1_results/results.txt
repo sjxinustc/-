@@ -1,0 +1,53 @@
+Lab 1 - Exercises 1-3
+R version 4.5.2 (2025-10-31 ucrt)
+Seeds: exercise 1 data=111, permutation=112; exercise 2=222; exercise 3=333.
+
+Exercise 1: independent Bernoulli data; two-sided tests
+    n             r            t            z         p_t         p_z      N
+   20 -0.1048284837 -0.447213595 -0.444749590 0.660055653 0.656500728 100000
+  100 -0.0243231568 -0.240858226 -0.240786968 0.810168180 0.809720231 100000
+ 1000 -0.0251981685 -0.796291659 -0.796038817 0.426051904 0.426009474 100000
+ extreme p_permutation          MCSE p_exact_reference
+  100000       1.00000 0.00000000000       1.000000000
+   83057       0.83057 0.00118626926       0.830964873
+   46642       0.46642 0.00157756896       0.465929514
+
+Exercise 2: Spearman rho = 0.7714286 
+      N extreme p_permutation           MCSE     p_exact absolute_error
+   1000     116       0.11600 0.010126401138 0.102777778  0.01322222222
+  10000    1013       0.10130 0.003017255541 0.102777778  0.00147777778
+ 100000   10161       0.10161 0.000955433974 0.102777778  0.00116777778
+Exact enumeration: 74 / 720 = 0.1027778 
+
+Exercise 3: inversion count D = 3 ; Kendall tau = 0.6 
+               test D_observed tau_observed      N extreme p_permutation
+ positive_one_sided          3          0.6 100000    6728       0.06728
+          two_sided          3          0.6 100000   13565       0.13565
+           MCSE exact_extreme total_permutations      p_exact
+ 0.000792170446            49                720 0.0680555556
+ 0.001082816132            98                720 0.1361111111
+
+All exact-enumeration checks passed.
+
+R version 4.5.2 (2025-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.2
